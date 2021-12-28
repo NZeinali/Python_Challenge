@@ -96,3 +96,31 @@ with open(csv_path,'w',newline='') as result:
 
     csvwriter.writerow(['-------------------------'])
 
+
+#  Exporting a TEXT file with the results
+
+with open("PyPoll_text.txt",'w') as text_result:
+
+    text_result.writelines(['Election Results'])
+    text_result.writelines('\n')  
+
+    text_result.writelines(['-------------------------'])
+    text_result.writelines('\n')
+    
+    text_result.writelines(['Total Votes: ' + str(sum)])
+    text_result.writelines('\n')
+
+    text_result.writelines(['-------------------------'])
+    text_result.writelines('\n')
+   
+    for i in range(len(candidates)):
+        text_result.writelines([str(candidates[i])+": " + str(percent[i]) + "  (" + str(vote_numbers[i])+")"])
+        text_result.writelines('\n')
+
+    text_result.writelines(['-------------------------'])
+    text_result.writelines('\n')
+
+    text_result.writelines(["Winner: " + winner])
+    text_result.writelines('\n')
+
+    text_result.writelines(['-------------------------'])

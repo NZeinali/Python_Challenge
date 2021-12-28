@@ -96,3 +96,29 @@ with open(csv_path,'w',newline='') as result:
     csvwriter.writerow(['Greatest Increase in Profits: ' + str(date_max) + ' ($' + str(max_profit) + ')'])
     
     csvwriter.writerow(['Greatest Decrease in Profits: ' + str(date_min) + ' ($' + str(min_profit) + ')'])
+
+
+#  Exporting a TEXT file with the results
+
+with open("PyBank_text.txt",'w') as text_result:
+    
+    
+    text_result.writelines(['Financial Analysis'])
+    text_result.writelines('\n')  
+
+    text_result.writelines(["---------------------"])
+    text_result.writelines('\n')  
+    
+    text_result.writelines(['Total Months: ' + str(total_months)])
+    text_result.writelines('\n')  
+    
+    text_result.writelines(['Total: $' + str(net_total_profit_loss)])
+    text_result.writelines('\n')  
+    
+    text_result.writelines(['Average Change: $' + str(average)])
+    text_result.writelines('\n')  
+
+    text_result.writelines(['Greatest Increase in Profits: ' + str(date_max) + ' ($' + str(max_profit) + ')'])
+    text_result.writelines('\n')  
+    
+    text_result.writelines(['Greatest Decrease in Profits: ' + str(date_min) + ' ($' + str(min_profit) + ')'])
